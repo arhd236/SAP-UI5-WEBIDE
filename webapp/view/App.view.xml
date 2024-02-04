@@ -1,0 +1,1089 @@
+<mvc:View controllerName="zfazfa_form.controller.App" xmlns:core="sap.ui.core" xmlns:u="sap.uxap" xmlns:fav="sap.f"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" class="sapUiSizeCompact" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:layout="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" id="page" showHeader="false" showFooter="true">
+				<content>
+					<u:ObjectPageLayout enableLazyLoading="true" useIconTabBar="true" showTitleInHeaderContent="true" upperCaseAnchorBar="false"
+						useTwoColumnsForLargeScreen="true">
+						<u:headerTitle>
+							<u:ObjectPageDynamicHeaderTitle>
+								<u:expandedHeading>
+									<Title text="{path:'new_header>/Vorna'} {path:'new_header>/Nachn'}"/>
+								</u:expandedHeading>
+								<u:snappedHeading>
+									<FlexBox fitContainer="true" alignItems="Center">
+										<fav:Avatar src="{path:'new_header>/Url'}" class="sapUiTinyMarginEnd" displayShape="Circle"/>
+										<Title text="{path:'new_header>/Vorna'} {path:'new_header>/Nachn'}"/>
+									</FlexBox>
+								</u:snappedHeading>
+								<u:expandedContent>
+									<Text text="Student Number: {path:'new_header>/StuNo'}"/>
+								</u:expandedContent>
+								<u:snappedContent>
+									<Text text="Student Number: {path:'new_header>/StuNo'}"/>
+								</u:snappedContent>
+							</u:ObjectPageDynamicHeaderTitle>
+						</u:headerTitle>
+						<u:headerContent>
+							<FlexBox wrap="Wrap">
+								<fav:Avatar src="{path:'new_header>/Url'}" displaySize="L" class="sapUiTinyMarginEnd"/>
+								<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+									<ObjectStatus state="Success" title="Campus" text="{path:'new_header>/StuCamp'}"/>
+									<ObjectStatus state="Success" title="Department" text="{path:'new_header>/StuDept'}"/>
+									<ObjectStatus state="Success" title="Program" text="{path:'new_header>/StuProg'}"/>
+									<ObjectStatus state="Success" title="Admission Session" text="{path:'new_header>/AdmissionSession'}"/>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+									<ObjectStatus state="Success" title="Father Name" text="{path:'new_header>/StuFname'}"/>
+									<ObjectStatus state="Success" title="Gender" text="{path:'new_header>/Gender'}"/>
+									<ObjectStatus state="Success" title="Status" text="{path:'new_header>/StuSta'}"/>
+								</layout:VerticalLayout>
+								<!--<layout:VerticalLayout width="300px" >-->
+								<!--</layout:VerticalLayout>-->
+							</FlexBox>
+							<ProgressIndicator percentValue="30" displayValue="30%" showValue="true" state="None"/>
+						</u:headerContent>
+						<u:sections>
+							<u:ObjectPageSection showTitle="true" title="Personal Information">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<!--<core:Title text=""/>-->
+														<Label text="Student Name"/>
+														<Input value="" placeholder="Enter Student Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Marital Status"/>
+														<Input value="" placeholder="Enter Marital Status" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Father’s Name"/>
+														<Input value="" placeholder="Enter Father’s Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Student’s SAP ID"/>
+														<Input value="" placeholder="Enter Student’s SAP ID" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Current Semester"/>
+														<Input value="" placeholder="Enter Current Semester" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Riphah’s Campus"/>
+														<Input value="" placeholder="Enter Riphah’s Campus" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Contact Email"/>
+														<Input value="" placeholder="Enter Contact Email" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Mention Degree Program you Passed from Riphah (If any)" wrapping="true"/>
+														<Input value="" placeholder="Enter Degree Program" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true"
+															text="Degree (Name and %age of obtained marks/CGPA) based on which you have been offered admission to Riphah. Attach Copy"/>
+														<Input value="" placeholder="Enter obtained marks" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Percentage of Marks Obtained (For Annual/Percentage based System)"/>
+														<Input value="" placeholder="Enter Percentage" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Organization employed With (Self)"/>
+														<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Current Place of Duty"/>
+														<Input value="" placeholder="Enter Current Place of Duty" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Employment Designation"/>
+														<Input value="" placeholder="Enter Employment Designation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="CNIC #"/>
+														<Input value="" placeholder="Enter CNIC #" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Date of Death"/>
+														<Input value="" placeholder="Enter Date of Death" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Main Cause of Death"/>
+														<Input value="" placeholder="Enter Main Cause of Death" liveChange="additionalInfoValidation" required="true"/>
+														<!--<core:Title text=""/>-->
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<!--<Label/>-->
+														<Label text="Application Date"/>
+														<Input value="" placeholder="Enter Application Date" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Degree Program"/>
+														<Input value="" placeholder="Enter Degree Program" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Father’s Status"/>
+														<Select selectedKey="1" change="onCitizenShip">
+															<core:Item key="1" text="Live"/>
+															<core:Item key="2" text="Deceased"/>
+														</Select>
+														<Label text="Intake Batch"/>
+														<Input value="" placeholder="Enter Intake Batch" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Current Term"/>
+														<Input value="" placeholder="Enter Current Term" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Riphah Boarder"/>
+														<Select selectedKey="1" change="onCitizenShip">
+															<core:Item key="1" text="Yes"/>
+															<core:Item key="2" text="No"/>
+														</Select>
+														<Label text="Cell/Tele#"/>
+														<Input value="" placeholder="Enter Cell/Tele#" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Passing Year/Session"/>
+														<DatePicker value="2024-01-01" displayFormat="MM-y" change="handleChange" class="sapUiSmallMarginBottom"/>
+														<Label wrapping="true" text="Institute/University Name"/>
+														<Input value="" placeholder="Enter Institute/University Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="CGPA Obtained (For Semester/CGPA Based System)"/>
+														<Input value="" placeholder="Enter CGPA" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Employee Number"/>
+														<Input value="" placeholder="Enter Employee Number" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Date of Joining"/>
+														<Input value="" placeholder="Enter Date of Joining" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Deceased Sponsor’s Name"/>
+														<Input value="" placeholder="Enter Deceased Sponsor’s Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label wrapping="true" text="Student Relation with deceased sponsor"/>
+														<Input value="" placeholder="Enter Student Relation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Place of Death"/>
+														<Input value="" placeholder="Enter Place of Death" liveChange="additionalInfoValidation" required="true"/>
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<VBox>
+													<Table items="{/BSitems}" mode="Delete" delete="onRemovePress">
+														<infoToolbar>
+															<OverflowToolbar active="true" design="Info">
+																<Label text="Brother/Sister Studying in Riphah/IIMCT"/>
+																<ToolbarSpacer/>
+																<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+															</OverflowToolbar>
+														</infoToolbar>
+														<columns>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text="Sr#"/>
+															</Column>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text="SAP #"/>
+															</Column>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text="Name"/>
+															</Column>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text="Program"/>
+															</Column>
+															<Column hAlign="End">
+																<Text text="Enrolled Cr Hrs/Courses"/>
+															</Column>
+														</columns>
+														<items>
+															<ColumnListItem>
+																<cells>
+																	<Text text="{SerialNumber}"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+														</items>
+													</Table>
+												</VBox>
+												<VBox>
+													<OverflowToolbar active="true" design="Info">
+														<Label text="Home Address"/>
+													</OverflowToolbar>
+													<TextArea width="100%" rows="3" placeholder="Enter Home Address" value=""/>
+												</VBox>
+												<VBox>
+													<OverflowToolbar active="true" design="Info">
+														<Label text="Questions"/>
+													</OverflowToolbar>
+													<Table>
+														<columns>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text=""/>
+															</Column>
+															<Column hAlign="End">
+																<Text text=""/>
+															</Column>
+														</columns>
+														<items>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Have you enrolled courses/modules in current semester/term?"/>
+																	<Select selectedKey="1" change="onCitizenShip">
+																		<core:Item key="1" text="Yes"/>
+																		<core:Item key="2" text="No"/>
+																	</Select>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Mention date when you enrolled courses/modules for current semester/term."/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Mention number of courses/modules you enrolled for current semester/term."/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text
+																		text="Payment of first installment of fee for current semester/term and total amount of arrears for preceding semesters/terms (if any) is necessary for acceptance of this application. Have you paid required amount?"/>
+																	<Select selectedKey="1" change="onCitizenShip">
+																		<core:Item key="1" text="Yes"/>
+																		<core:Item key="2" text="No"/>
+																	</Select>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Mention amount of fee paid for current semester/term."/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Mention total amount of fee and dues outstanding to date."/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="Mention amount of arrears outstanding for preceding semesters/terms."/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text
+																		text="Submission of application for financial assistance (FA) is necessary within 15 days of start of current semester/term else application is considered for FA in next semester/term. Are you submitting this application with 15 days of start of classes?"/>
+																	<Select selectedKey="1" change="onCitizenShip">
+																		<core:Item key="1" text="Yes"/>
+																		<core:Item key="2" text="No"/>
+																	</Select>
+																</cells>
+															</ColumnListItem>
+														</items>
+													</Table>
+												</VBox>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Financial Change Information">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<VBox>
+													<OverflowToolbar active="true" design="Info">
+														<Label text="For Mawakhat"/>
+													</OverflowToolbar>
+													<Table>
+														<columns>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text=""/>
+															</Column>
+															<Column minScreenWidth="Tablet" demandPopin="true">
+																<Text text="Particulars"/>
+															</Column>
+															<Column hAlign="End">
+																<Text text="Amount in PKR"/>
+															</Column>
+														</columns>
+														<items>
+															<ColumnListItem>
+																<cells>
+																	<Text text="a"/>
+																	<Text text="Total amount of annual family income(s) at the time of admission:"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="b"/>
+																	<Text text="Total amount of annual family income(s) today:"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+															<ColumnListItem>
+																<cells>
+																	<Text text="c"/>
+																	<Text text="Financial Change after Admission (a-b):"/>
+																	<Input value="" placeholder="" liveChange="additionalInfoValidation" required="true"/>
+																</cells>
+															</ColumnListItem>
+														</items>
+													</Table>
+												</VBox>
+												<VBox>
+													<OverflowToolbar active="true" design="Info">
+														<Label text="Brief reason of change in income:"/>
+													</OverflowToolbar>
+													<TextArea width="100%" rows="8"
+														value="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat"/>
+												</VBox>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Family Information">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<core:Title text="Particulars of Father"/>
+														<Label text="Name"/>
+														<Input value="" placeholder="Enter Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Status"/>
+														<Select selectedKey="1" change="onCitizenShip">
+															<core:Item key="1" text="Live"/>
+															<core:Item key="2" text="Deceased"/>
+														</Select>
+														<Label text="Profession"/>
+														<Input value="" placeholder="Enter Profession" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Designation"/>
+														<Input value="" placeholder="Enter Designation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Organization"/>
+														<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Country of Stay"/>
+														<Input value="" placeholder="Enter Country of Stay" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Monthly Income"/>
+														<Input value="" placeholder="Enter Monthly Income" liveChange="additionalInfoValidation" required="true"/>
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<core:Title text="Particulars of Mother"/>
+														<Label text="Name"/>
+														<Input value="" placeholder="Enter Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Status"/>
+														<Select selectedKey="1" change="onCitizenShip">
+															<core:Item key="1" text="Live"/>
+															<core:Item key="2" text="Deceased"/>
+														</Select>
+														<Label text="Profession"/>
+														<Input value="" placeholder="Enter Profession" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Designation"/>
+														<Input value="" placeholder="Enter Designation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Organization"/>
+														<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Country of Stay"/>
+														<Input value="" placeholder="Enter Country of Stay" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Monthly Income"/>
+														<Input value="" placeholder="Enter Monthly Income" liveChange="additionalInfoValidation" required="true"/>
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<core:Title text="Particulars of Fee Sponsor"/>
+														<Label text="Name"/>
+														<Input value="" placeholder="Enter Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Relation (with Student)"/>
+														<Input value="" placeholder="Enter Relation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Profession"/>
+														<Input value="" placeholder="Enter Profession" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Designation"/>
+														<Input value="" placeholder="Enter Designation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Organization"/>
+														<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Country of Stay"/>
+														<Input value="" placeholder="Enter Country of Stay" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Monthly Income"/>
+														<Input value="" placeholder="Enter Monthly Income" liveChange="additionalInfoValidation" required="true"/>
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<f:SimpleForm editable="true" layout="ResponsiveLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+													adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+													singleContainerFullSize="false">
+													<f:content>
+														<core:Title text="Particulars of Spouse"/>
+														<Label/>
+														<Label text="Name"/>
+														<Input value="" placeholder="Enter Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Father’s Name"/>
+														<Input value="" placeholder="Enter Father’s Name" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Profession"/>
+														<Input value="" placeholder="Enter Profession" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Designation"/>
+														<Input value="" placeholder="Enter Designation" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Organization"/>
+														<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Country of Stay"/>
+														<Input value="" placeholder="Enter Country of Stay" liveChange="additionalInfoValidation" required="true"/>
+														<Label text="Monthly Income"/>
+														<Input value="" placeholder="Enter Monthly Income" liveChange="additionalInfoValidation" required="true"/>
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+											<VBox>
+												<OverflowToolbar active="true" design="Info">
+													<Label text="Particulars of Student"/>
+												</OverflowToolbar>
+												<Label text="Name"/>
+												<Input value="" placeholder="Enter Name" liveChange="additionalInfoValidation" required="true"/>
+												<Label text="Profession"/>
+												<Input value="" placeholder="Enter Profession" liveChange="additionalInfoValidation" required="true"/>
+												<Label text="Designation"/>
+												<Input value="" placeholder="Enter Designation" liveChange="additionalInfoValidation" required="true"/>
+												<Label text="Organization"/>
+												<Input value="" placeholder="Enter Organization" liveChange="additionalInfoValidation" required="true"/>
+												<Label text="Monthly Income"/>
+												<Input value="" placeholder="Enter Monthly Income" liveChange="additionalInfoValidation" required="true"/>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Mention particulars of all immediate family members residing with your family">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/items}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Total family members residing with your family (whether dependents or not):"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Name"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Age"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Relation with Student"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Marital Status"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Study Level"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Occupation"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Institution/ Organization"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Country of Stay"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value=""/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Information of Assets in the ownership of family members">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/FMitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Information of Assets in the ownership of family members"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Name"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Location"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Area (in acre/marla/sq.ft)"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Present Value (Pak Rs.) "/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Select selectedKey="1" change="onCitizenShip">
+																	<core:Item key="1" text="Agricultural Land"/>
+																	<core:Item key="2" text="Commercial Plot"/>
+																	<core:Item key="3" text="Residential House"/>
+																	<core:Item key="4" text="Residential Plot"/>
+																	<core:Item key="5" text="Rented Buildings"/>
+																	<core:Item key="6" text="Shops"/>
+																	<core:Item key="7" text="Gratuity received"/>
+																</Select>
+																<Input value=""/>
+																<Input value=""/>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Information of Annual Family Income">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/AFitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Information of Annual Family Income"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Information of Annual Family Income"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Amount Per Year (Pak Rs.)"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Select selectedKey="1" change="onCitizenShip">
+																	<core:Item key="1" text="Father’s Salary/ Business Income"/>
+																	<core:Item key="2" text="Mother’s Salary/ Business Income"/>
+																	<core:Item key="3" text="Personal Salary/ Business Income"/>
+																	<core:Item key="4" text="Brother’s Financial Support to family"/>
+																	<core:Item key="5" text="Sister’s Financial Support to family"/>
+																	<core:Item key="6" text="Any other Relative’s Financial Support to family, (Please mention relation with student)"/>
+																	<core:Item key="7" text="Agriculture Income"/>
+																	<core:Item key="7" text="Rental Income (if any)"/>
+																	<core:Item key="7" text="Pension"/>
+																	<core:Item key="7" text="Profit on Investment"/>
+																	<core:Item key="7" text="Foreign Source Income (If any)"/>
+																</Select>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Information of Loan(s) Taken">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/LTitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Information of Loan(s) Taken"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Name of Lender (Person/Bank/ Organization)"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Purpose"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Date of loan availed"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Principal Amount (PKR)"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Annual Repayment (PKR)"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Outstanding Balance (PKR)"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Input value=""/>
+																<Input value=""/>
+																<DatePicker placeholder="Enter Date ..." change="handleChange" class="sapUiSmallMarginBottom"/>
+																<Input value="" type="Number"/>
+																<Input value="" type="Number"/>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Information of Annual Family Expenditure">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/AFitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Information of Annual Family Expenditure"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Expense Heads"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Amount Per Year (Pak Rs.)"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Select selectedKey="1" change="onCitizenShip">
+																	<core:Item key="1" text="Telephone Bills"/>
+																	<core:Item key="2" text="Gas Bills"/>
+																	<core:Item key="3" text="Electricity Bills"/>
+																	<core:Item key="4" text="Food/Grocery/Household"/>
+																	<core:Item key="5" text="Salary House Servants"/>
+																	<core:Item key="6" text="Medical Expenses (if any)"/>
+																	<core:Item key="7" text="Rental Expenses (if any)"/>
+																	<core:Item key="8" text="Family Member’s Educational Expenses"/>
+																	<core:Item key="9" text="Donations/Zakat"/>
+																	<core:Item key="10" text="Loan Re-payments"/>
+																	<core:Item key="11" text="Insurance Premium"/>
+																</Select>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Student’s Academic Performance">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table items="{/PDitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Academic Performance (Preceding Degree Programs)"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Stage"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Marks/CGPA"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Select selectedKey="1" change="onCitizenShip">
+																	<core:Item key="1" text="Matric/O-Levels"/>
+																	<core:Item key="2" text="FA/F.Sc./A-Levels"/>
+																	<core:Item key="3" text="BA/B.Sc. (02 years)"/>
+																	<core:Item key="4" text="BS Honour’s (04/05 years)"/>
+																	<core:Item key="5" text="MA/M.Sc/M.COM (02 years)"/>
+																	<core:Item key="6" text="MBBS/BDS"/>
+																	<core:Item key="7" text="MS/M.Phil"/>
+																	<core:Item key="8" text="Ph.D"/>
+																</Select>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+											<VBox>
+												<Table items="{/CDitems}" mode="Delete" delete="onRemovePress">
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Academic Performance (Current Degree Program)"/>
+															<ToolbarSpacer/>
+															<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Sr#"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Stage"/>
+														</Column>
+														<Column hAlign="End">
+															<Text text="Marks/CGPA"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{SerialNumber}"/>
+																<Select selectedKey="1" change="onCitizenShip">
+																	<core:Item key="1" text="1st Semester/Term"/>
+																	<core:Item key="2" text="2nd Semester/Term"/>
+																	<core:Item key="3" text="3rd Semester/Term"/>
+																	<core:Item key="4" text="4th Semester/Term"/>
+																	<core:Item key="5" text="5th Semester/Term"/>
+																	<core:Item key="6" text="6th Semester/Term"/>
+																	<core:Item key="7" text="7th Semester/Term"/>
+																	<core:Item key="8" text="8th Semester/Term"/>
+																	<core:Item key="9" text="9th Semester/Term"/>
+																	<core:Item key="10" text="10th Semester/Term"/>
+																</Select>
+																<Input value="" type="Number"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Student’s Request for Financial Assistance">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<TextArea width="100%" rows="20" placeholder="Enter Home Address"
+													value="Sir, I request you for award of financial assistance amounting to Pak Rs.___________________ equal to _______________ percent tuition fee of current term/semester of my mentioned degree program. Below mentioned financial change/financial hardship(s) disclosed after my admission to Riphah International University compelled me to apply for this assistanceship:"/>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Undertaking">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Text renderWhitespace="true" wrapping="true" text="1.&#x9;I have attached below documents relevant to my application;&#xA;&#xA;"></Text>
+												<CheckBox
+													text="For salaried persons latest salary slips (of last three months) or salary certificate issued by employer. Retirement/Termination letter in case left the job."></CheckBox>
+												<CheckBox text="Income certificate from relevant authority in case of Business/Private Practice/ Agriculture land will be accepted."></CheckBox>
+												<CheckBox text="Copy of latest Income Tax return and Wealth Tax statements of all earning members (Where applicable). "></CheckBox>
+												<CheckBox text="Bank account statement for latest one year."></CheckBox>
+												<CheckBox text="Evidence of educational expenses paid by the family for last six months."></CheckBox>
+												<CheckBox text="Evidence of scholarship or assistance received by siblings to complete their education."></CheckBox>
+												<CheckBox text="Copy of Electricity, Gas and Telephone / Mobile Bills (for last three months). "></CheckBox>
+												<CheckBox
+													text="Documentary evidence of all investment held. (Saving certificates, fixed deposits, insurance policies, Gratuity, Provident Fund etc.)"></CheckBox>
+												<CheckBox text="Copy of lease / rental agreement of all properties taken / given on lease / rent. "></CheckBox>
+												<CheckBox text="Documentary evidence of loan taken with its updated repayment schedule. "></CheckBox>
+												<CheckBox text="Medical diagnostics/treatment evidences along with expenses details."></CheckBox>
+												<CheckBox text="Evidence of divorce in case mother is handling fee matters herself after separation. "></CheckBox>
+												<CheckBox
+													text="Any critical information which is not covered above but seems necessary can be enclosed in writing as a separate sheet with evidence (if applicable).&#xA;&#xA;"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true"
+													text="&#xA;&#xA;2.&#x9;I understand that submission of this application does not guarantee award of financial assistance, nor does it absolve me of any financial responsibility in relation to study at Riphah.&#xA;&#xA;"></Text>
+												<Text renderWhitespace="true" wrapping="true"
+													text="3.&#x9;The information given in this application is complete and true to the best of my knowledge. I understand that concealing information or providing incorrect information will result in denial of financial assistance or recover the amounts awarded as assistanceships to date for hiding/providing false information and may also result in strict disciplinary action, including possible expulsion from the university.&#xA;&#xA;"></Text>
+												<Text renderWhitespace="true" wrapping="true"
+													text="4.&#x9;I have been informed that students of semester system need to achieve semester GPA of 3.20 however students of MBBS/BDS are required to clear their respective prof in 1st. Annual exam with good marks to remain eligible for Mawakhat Assistanceship along with financial deservedness.&#xA;&#xA;"></Text>
+												<Text renderWhitespace="true" wrapping="true"
+													text="5.&#x9;I agree to abide by the decision of the Financial Assistance Committee and that university reserves the right to verify the information/evidences provided by me. Assistanceship shall be available under need cum merit base subject to approval. University has discretion to accept/reject the application, revoke the assistanceship or revise the policies as deemed necessary by the authorities’ time to time.&#xA;&#xA;"></Text>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Interview details by site in-charge F/D">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<TextArea width="100%" rows="10" placeholder="" value=""/>
+												<Text renderWhitespace="true" wrapping="true"
+													text="I have confirmed that student has filled all information required in this application form. Relevant documents are attached in evidence to given information. Given information has been compared with evidence annexed by the student and is found; "></Text>
+												<Text renderWhitespace="true" wrapping="true" text="&#x9;&#x9;1.&#x9;Matched"></Text>
+												<CheckBox text="(Please mark √ if applicable)"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;2.&#x9;Does not match"></Text>
+												<CheckBox text="(Please mark √ if applicable)"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;3.&#x9;Discrepancy (if any)"></Text>
+												<TextArea width="100%" rows="3" placeholder="Enter Discrepancy" value=""/>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Recommendation of DEAN/Director/Principal">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Text renderWhitespace="true" wrapping="true"
+													text="Reflection of better use of Riphah’s strategic priority “Amanah” is also expected in your recommendation."></Text>
+												<Text renderWhitespace="true" wrapping="true"
+													text="Please specify your recommendation in absolute terms for clarity of decision enabling organization to spend its precious resources for genuine deserving students to make their future better as a prime social responsibility.&#xA;"></Text>
+												<Text renderWhitespace="true" wrapping="true"
+													text="&#xA;I have interviewed the parents/sponsor of student. In the light of student’s academic performance, facts mentioned in application, annexed evidences and assessment during interview, his/her application is:&#xA;"></Text>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;1.&#x9;Regretted"></Text>
+												<CheckBox text="(Please mark √ if you are not satisfied)"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true"
+													text="&#xA;&#x9;&#x9;2.&#x9;found deserving, need our financial help to complete his/her studies at Riphah and is recommended” for __________ % Financial Assistance on tuition fee for; "></Text>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;&#x9;&#x9;a.&#x9;Entire duration of the degree program."></Text>
+												<CheckBox text="(Please mark √ if recommended)"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;&#x9;&#x9;b.&#x9;For one time only."></Text>
+												<CheckBox text="(Please mark √ if recommended)"></CheckBox>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#x9;&#x9;3.&#x9;Any other remarks:"></Text>
+												<TextArea width="100%" rows="3" placeholder="Enter Discrepancy" value=""/>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Attachments">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table>
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Attachments"/>
+															<ToolbarSpacer/>
+															<!--<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>-->
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="FA Scheme"/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text="Attachments"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="Iblaagh Assistanceship"/>
+																<Text text="Employment Letter/Card"/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Riphah Graduate"/>
+																<Text text="Previous Degree Final Transcript"/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Ammal Assistanceship"/>
+																<VBox>
+																	<Text text="Admission Letter"/>
+																	<Text text="Employment Letter/Card"/>
+																	<Text text="Father’s CNIC"/>
+																</VBox>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Wali Assistanceship"/>
+																<VBox>
+																	<Text text="Sponsor death certificate issued by NADRA."/>
+																	<Text text="Attested copy of Death Certificate issued by the Hospital/Local Authority."/>
+																	<Text text="Attested copy of CNIC or Form-B of student for Wali Assistanceship."/>
+																</VBox>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Talent and Bio Medical Scholarship"/>
+																<Text text="Attested copy of degree/transcript is enclosed."/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Salaar Assistanceship"/>
+																<Text text="Employment Letter"/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Usra Assistanceship"/>
+																<VBox>
+																	<Text text="Attested Photocopy on CNIC of Parents."/>
+																	<Text text="Attested Photocopy of CNIC or Form-B of brothers/sisters studying in Riphah/IIMCT."/>
+																	<Text text="Attested photocopy of CNIC or Form-B of student applying for USRA Assistanceship."/>
+																</VBox>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="ROSE Assistanceship"/>
+																<Text text="ROSE nomination letter"/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Mawakhat Assistanceship"/>
+																<VBox>
+																	<Text text="Health and Medical Treatment Confirmation"/>
+																	<Text
+																		text="&#xA;For salaried persons latest salary slips (of last three months) or salary certificate issued by employer. Retirement/Termination letter in case left the job."/>
+																	<Text
+																		text="&#xA;Income certificate from relevant authority in case of Business/Private Practice/ Agriculture land will be accepted. Copy of latest Income Tax return and Wealth Tax statements of all earning members (Where applicable). "/>
+																	<Text text="&#xA;Bank account statement for latest one year."/>
+																	<Text text="&#xA;Evidence of educational expenses paid by the family for last six months."/>
+																	<Text text="&#xA;Evidence of scholarship or assistance received by siblings to complete their education."/>
+																	<Text
+																		text="&#xA;Copy of Electricity, Gas and Telephone / Mobile Bills (for last three months). Documentary evidence of all investment held. (Saving certificates, fixed deposits, insurance policies, Gratuity, Provident Fund etc.)"/>
+																	<Text
+																		text="&#xA;Copy of lease / rental agreement of all properties taken / given on lease / rent. Documentary evidence of loan taken with its updated repayment schedule. Medical diagnostics/treatment evidences along with expenses details."/>
+																	<Text
+																		text="&#xA;Evidence of divorce in case mother is handling fee matters herself after separation. Any critical information which is not covered above but seems necessary can be enclosed in writing as a separate sheet with evidence (if applicable)."/>
+																</VBox>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+							<u:ObjectPageSection showTitle="true" title="Health and Medical Treatment Confirmation">
+								<u:subSections>
+									<u:ObjectPageSubSection>
+										<u:blocks>
+											<VBox>
+												<Table>
+													<infoToolbar>
+														<OverflowToolbar active="true" design="Info">
+															<Label text="Health and Medical Treatment Confirmation"/>
+															<ToolbarSpacer/>
+															<!--<Button icon="sap-icon://add" type="Default" press="onAddPress" ariaLabelledBy="editButtonLabel"/>-->
+														</OverflowToolbar>
+													</infoToolbar>
+													<columns>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text=""/>
+														</Column>
+														<Column minScreenWidth="Tablet" demandPopin="true">
+															<Text text=""/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="Patient’s Name:"/>
+																<Text text=""/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Patient’s Age:"/>
+																<Text text=""/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Please mention name/title of Disease/Incident: "/>
+																<Text text=""/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Mentioned Date by which patient is suffering from this disease/incident."/>
+																<Text text=""/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem>
+															<cells>
+																<Text text="Expected expense on mentioned treatment of this disease:"/>
+																<Text text=""/>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+												<Text renderWhitespace="true" wrapping="true" text="&#xA;&#xA;Brief Medical History and Treatments given to this patient:"></Text>
+												<TextArea width="100%" rows="15" placeholder="Brief Medical History and Treatments given to this patient:" value=""/>
+											</VBox>
+										</u:blocks>
+									</u:ObjectPageSubSection>
+								</u:subSections>
+							</u:ObjectPageSection>
+						</u:sections>
+					</u:ObjectPageLayout>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button text="Save" type="Emphasized"/>
+						<Button text="Submit" type="Accept"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

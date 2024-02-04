@@ -1,0 +1,36 @@
+{
+    "resources": [
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}
