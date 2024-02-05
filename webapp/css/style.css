@@ -1,0 +1,59 @@
+.image_cls {
+	/*  background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png); */
+	background-image:url("https://icap.org.pk/wp-content/themes/icap/images/footer-logo.png");
+
+	background-color: #e2d8e1;
+	/* height: 100%; */
+	
+	background-position: center;
+	background-repeat: no-repeat; 
+	background-size: contain;
+  /* 	Resize the background image to cover the entire container */
+}
+/* .sapTntSideNavigation{
+	width: fit-content !important;
+} */
+.corners1 {
+	border-radius: 10px;
+	background-color:rgba(255,255,255,0.3);	
+	
+	
+}
+
+
+.inputf {
+	
+	border: 2px solid black;
+	border-radius: 4px;
+		
+	background-color: #ffffff;
+	color: white;
+	
+}
+
+.label {
+	color: black;
+	font-weight: bold;
+	font-size: 21px; padding : 8px;
+	font-family: Arial;
+	padding: 8px;
+}
+
+ .button {
+	transition-duration: 0.4s;
+	color: #400040;
+	background-color: #c0c0c0;
+  
+
+  
+  text-align: center;
+  text-decoration:blink;
+ 
+  cursor: pointer;
+} 
+
+
+.button:hover {
+  background-color: #7a7a7a;
+  color: white;
+} 
